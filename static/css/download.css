@@ -1,0 +1,116 @@
+.download-hero {
+    position: relative;
+    height: 300px;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    color: white;
+    font-family: "Microsoft YaHei UI", Arial, sans-serif;
+}
+
+.download-hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.download-wrapper {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.search-container {
+    margin-bottom: 1.5rem;
+}
+
+.search-box {
+    width: 80%;
+    max-width: 600px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.download-container {
+    text-align: center;
+}
+
+.download-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.download-link:hover {
+    color: #0056b3;
+    transform: scale(1.05);
+}
+
+.separator {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0.5rem 0;
+}
+
+.no-files {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.download-link {
+    flex: 1;
+    text-decoration: none;
+    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.baidu-link {
+    color: #f39c12; /* 百度网盘的橙色 */
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.baidu-link:hover {
+    text-decoration: underline;
+}
+
+.yes-link {
+    color: #3498db; /* 123网盘的蓝色 */
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.yes-link:hover {
+    text-decoration: underline;
+}

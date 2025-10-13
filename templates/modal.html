@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="modal-{{ component_id }}" class="modal">
+    <div class="modal-content">
+        <span class="close" data-component-id="{{ component_id }}">&times;</span>
+        <h2>{{ title }}</h2>
+        <form method="post" action="{{ action_url }}">
+            {% for field in fields %}
+                <div class="form-group">
+                    <label for="{{ field.id }}">{{ field.label }}</label>
+                    <input
+                        type="{{ field.type }}"
+                        id="{{ field.id }}"
+                        name="{{ field.name }}"
+                        placeholder="{{ field.placeholder }}"
+                        required
+                    />
+                </div>
+            {% endfor %}
+            <button type="submit">{{ button_text }}</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

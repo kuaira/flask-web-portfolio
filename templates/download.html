@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="download-hero">
+    <h1>文件下载</h1>
+</div>
+
+<!-- 搜索框和文件列表容器 -->
+<div class="download-wrapper">
+    <!-- 搜索框 -->
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="搜索文件...">
+    </div>
+
+    <!-- 下载文件列表 -->
+    <section class="download-container">
+        {% if files is not none and files|length > 0 %}
+            {% for file in files %}
+                <div class="file-item" data-file-name="{{ file.name }}">
+                    <a href="{{ file.url }}" class="download-link">
+                        {{ file.name }}
+                    </a>
+                    <!-- 百度网盘和123网盘链接将通过 JavaScript 动态添加 -->
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="no-files">没有可用的文件</div>
+        {% endif %}
+    </section>
+</div>
+
+<script src="{{ url_for('static', filename='js/download.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,101 @@
+/* 紧凑型登录/注册通用样式 */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6e8efb 0%, #4776e6 100%);
+}
+
+.login-form {
+    width: 90%;
+    max-width: 320px;          /* 关键：限制最大宽度 */
+    padding: 1.5rem 1.75rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.6s forwards;
+}
+
+.login-form h1 {
+    font-size: 1.35rem;
+    text-align: center;
+    margin: 0 0 1.25rem;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 0.9rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.55rem 0.65rem;
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #4070f4;
+    box-shadow: 0 0 0 3px rgba(64, 112, 244, 0.18);
+    transform: scale(1.02);
+}
+
+.submit-button {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+    color: #fff;
+    background: #4070f4;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #3059e3;
+}
+
+.message {
+    margin-top: 0.75rem;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.message.error {
+    background: #fee;
+    color: #c33;
+    animation: shake 0.4s;
+}
+
+.message.success {
+    background: #efe;
+    color: #363;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+}

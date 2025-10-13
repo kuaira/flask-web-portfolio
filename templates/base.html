@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kuaira</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+    <!-- 引入 CSS 文件 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/download.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/manage_themes.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/product.css') }}">
+    
+</head>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('index') }}">kuaira项目展示</a>
+        </div>
+        <ul class="nav-links">
+    <li><a href="{{ url_for('index') }}">首页</a></li>
+    <li><a href="{{ url_for('download') }}">下载</a></li>
+    <li><a href="{{ url_for('themes') }}">主题</a></li>
+    <li><a href="{{ url_for('product') }}">产品</a></li>
+    <li><a href="{{ url_for('user_center') }}">用户中心</a></li>
+    <!-- 下拉教程保持不变 -->
+    <li class="dropdown">
+        <a href="#">教程</a>
+        <ul class="dropdown-menu">
+            <li><a href="https://space.bilibili.com/3546676648216765" target="_blank">B站</a></li>
+            <li><a href="https://www.youku.com/" target="_blank">优酷</a></li>
+        </ul>
+    </li>
+</ul>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main> 
+
+    <footer>
+        <div class="footer" >
+            <p>©诸暨得悟智能科技有限公司</p>
+            <img src="{{ url_for('static', filename='images/备案图标.jpg') }}" alt="">
+            <a href="https://beian.mps.gov.cn/#/query/webSearch?code=33068102000943" rel="noreferrer" target="_blank">浙公网安备33068102000943</a>
+        </div>
+    </footer>
+
+    <!-- 引入 JS 文件 -->
+    <script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+</body>
+</html>

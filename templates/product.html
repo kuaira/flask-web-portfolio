@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="product-hero">
+    <h1>我们的产品</h1>
+</div>
+
+<div class="product-wrapper">
+    <div class="product-card">
+        <img src="{{ url_for('static', filename='images/product1.jpg') }}" alt="Product 1">
+        <h2>Product 1</h2>
+        <p class="description">This is a description of Product 1.</p>
+        <p class="price">$100.00</p>
+        <button class="buy-button">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+        <img src="{{ url_for('static', filename='images/product2.jpg') }}" alt="Product 2">
+        <h2>Product 2</h2>
+        <p class="description">This is a description of Product 2.</p>
+        <p class="price">$200.00</p>
+        <button class="buy-button">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+        <img src="{{ url_for('static', filename='images/product3.jpg') }}" alt="Product 3">
+        <h2>Product 3</h2>
+        <p class="description">This is a description of Product 3.</p>
+        <p class="price">$300.00</p>
+        <button class="buy-button">Buy Now</button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/product.js') }}"></script>
+{% endblock %}  

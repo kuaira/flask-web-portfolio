@@ -1,0 +1,114 @@
+.theme-hero {
+    position: relative;
+    height: 600px;
+    background-color: rgb(89, 160, 218);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+
+.theme-hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #323232;
+    margin: 0;
+}
+
+.theme-nav {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list li {
+    margin: 0 1rem;
+}
+
+.nav-list a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-list a:hover {
+    color: #007bff;
+}
+
+.search-bar {
+    margin-left: auto;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.search-bar button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.recommended-themes {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.theme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.theme-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1rem;
+    text-align: center;
+}
+
+.theme-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.theme-item h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.theme-item p {
+    font-size: 0.9rem;
+    color: #666;
+}

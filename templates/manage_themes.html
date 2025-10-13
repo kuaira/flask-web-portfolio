@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="theme-container">
+    <h1>主题管理</h1>
+
+    <!-- 搜索主题 -->
+    <div class="search-container">
+        <form action="/search_theme" method="GET">
+            <input type="text" placeholder="搜索主题" name="query">
+            <button type="submit">搜索</button>
+        </form>
+    </div>
+
+    <!-- 添加主题 -->
+    <div class="add-theme">
+        <form action="/add_theme" method="POST">
+            <input type="text" placeholder="主题名称" name="name" required>
+            <input type="text" placeholder="主题描述" name="description" required>
+            <button type="submit">添加主题</button>
+        </form>
+    </div>
+
+    <!-- 主题列表 -->
+    <div class="theme-list">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>名称</th>
+                    <th>描述</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for theme in themes %}
+                <tr>
+                    <td>{{ theme.id }}</td>
+                    <td>{{ theme.name }}</td>
+                    <td>{{ theme.description }}</td>
+                    <td>
+                        <button class="edit-btn">编辑</button>
+                        <button class="delete-btn">删除</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 修改主题 -->
+    <div class="edit-theme" style="display: none;">
+        <form action="/edit_theme" method="POST">
+            <input type="hidden" name="id">
+            <input type="text" placeholder="主题名称" name="name" required>
+            <input type="text" placeholder="主题描述" name="description" required>
+            <button type="submit">保存修改</button>
+        </form>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+{% endblock %}

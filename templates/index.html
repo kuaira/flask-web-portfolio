@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- 主页大图 -->
+<section class="hero">
+    <canvas></canvas>
+    <h1 class="hero-title">矩阵星球,重新定义电脑副屏<br> <br>个人展示用作品</h1>
+   
+</section>
+
+<section class="features">
+    <div class="feature-item">
+        <img src="{{ url_for('static', filename='images/icon1.png') }}" alt="USB接口">
+        <h3>USB接口</h3>
+        <p>独家研发硬件, 不占显卡资源, 不降游戏帧数</p>
+    </div>
+    <div class="feature-item">
+        <img src="{{ url_for('static', filename='images/icon3.png') }}" alt="自主研发软件">
+        <h3>自主研发软件</h3>
+        <p>更加专业, 占资源更低</p>
+    </div>
+    <div class="feature-item">
+        <img src="{{ url_for('static', filename='images/icon4.png') }}" alt="丰富的主题">
+        <h3>丰富的主题</h3>
+        <p>多种主题持续更新</p>
+    </div>
+    <!-- 后续可以继续添加功能项 -->
+</section>
+
+<!-- 主题展示区域 -->
+<div class="clear">
+    <p>主题展示</p>
+</div>
+<section class="index-theme-display">
+    <div class="index-theme-item">
+        <a href="{{ url_for('download') }}" title="主题1">
+            <img src="{{ url_for('static', filename='images/1.jpg') }}" alt="主题1">
+        </a>
+    </div>
+    <div class="index-theme-item">
+        <a href="{{ url_for('download') }}" title="主题2">
+            <img src="{{ url_for('static', filename='images/2.jpg') }}" alt="主题2">
+        </a>
+    </div>
+    <div class="index-theme-item">
+        <a href="{{ url_for('download') }}" title="主题3">
+            <img src="{{ url_for('static', filename='images/3.jpg') }}" alt="主题3">
+        </a>
+    </div>
+    <div class="index-theme-item">
+        <a href="{{ url_for('download') }}" title="主题4">
+            <img src="{{ url_for('static', filename='images/4.jpg') }}" alt="主题4">
+        </a>
+    </div>
+    <div class="index-theme-item">
+        <a href="{{ url_for('download') }}" title="主题5">
+            <img src="{{ url_for('static', filename='images/5.jpg') }}" alt="主题5">
+        </a>
+    </div>
+    <div class="index-theme-item">
+        <a href="{{ url_for('download') }}" title="主题6">
+            <img src="{{ url_for('static', filename='images/6.jpg') }}" alt="主题6">
+        </a>
+    </div>
+    <div class="index-theme-item">
+        <a href="{{ url_for('download') }}" title="主题7">
+            <img src="{{ url_for('static', filename='images/7.jpg') }}" alt="主题7">
+        </a>
+    </div>
+    <div class="index-theme-item">
+        <a href="{{ url_for('download') }}" title="主题8">
+            <img src="{{ url_for('static', filename='images/8.jpg') }}" alt="主题8">
+        </a>
+    </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
