@@ -34,3 +34,4 @@ python app.py db_create        # 已封装创建表+默认管理员
 
 # 4. 运行
 flask run
+```
